@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600'); /* used 400 and 500? DELETE? */
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;   
+  }
+  
+html, 
+body {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;   
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+  }
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.top-header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 0.5rem;
+  background-color: rgba(25,25,25, 0.8);
+  border-bottom: 1px solid rgb(126, 126, 126);
+  color: rgb(233, 233, 233);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+/* ************ HAMBURGER MENU: **************** */
+
+.collapsible-menu {
+  display: none;
+  width: 100%;  
+  background-color: rgba(26, 26, 26, 0.8);
+  color: rgb(233, 233, 233);
+  padding: 3rem 1rem 0 1rem;
+}
+
+.collapsible-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.collapsible-menu a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+.collapsible-menu label {
+  display: block;
+  cursor: pointer; 
+  /* background: url(menu.png) no-repeat left center; - NOT USED */
+  padding: 10px 0 10px 50px;
+}
+
+.m-menu__content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 0 0 50px;
+}
+
+input#m-menu {
+  display: none;
+}
+
+/* NOT USED:
+input:checked ~ label {
+  background-image: url(close.png);
+}
+*/
+
+input:checked ~ .m-menu__content {
+  max-height: 100%;
+}
+
+/* *************** up from here: hamburger menu **************** */
+
+.header__logo {
+  font-variant: small-caps;
+  font-size: 2rem;  
+  font-weight: 500;
+}
+
+.logo-link:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+.navbar__items {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__item {
+  margin: 0 0.75rem;      
+}
+
+.logo {
+  align-self: flex-start;
+}
+
+.home {
+  position: relative;
+}
+
+.home__img {
+  background-image: url("../img/bg-mountains.jpg");
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100vh;   
+  overflow: hidden;
+}
+
+.img-mountain {  
+  position: relative;  
+  top: 0;
+  overflow: hidden;
+  height: 100%;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.home__name {
+  position: absolute;
+  top: 30%;
+  left: 11%;
+  font-size: 6rem;
+  font-weight: 500;
+  font-variant: small-caps;
+  color:  rgb(20,20,20);
+  text-shadow: 2px 2px 2px rgb(99, 99, 99);
+}
+
+.home__quote {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  width: 80%;
+  font-size: 2rem;
+  color: rgb(233, 233, 233);
+  background-color: rgba(59, 59, 59, 0.4);
+  padding: 1rem;
+}
+
+.main {     
+  position: relative; 
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.main--headings {
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px rgb(99, 99, 99);
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.main__about {
+  position: relative; 
+  padding: 3rem 10% 2rem 10%;
+  z-index: 10;
+  background-color: rgb(225, 244, 255);
+  background-image: url("../img/networks-sv.jpg");
+  background-size: cover;
+  background-position: 100%;
+  color: rgb(10, 10, 10);
+  border-top: 1px solid rgb(126, 126, 126);
+  border-bottom: 1px solid rgb(126, 126, 126);
+}
+
+.main__about--text {
+  padding-top: 1rem;  
+  text-align: justify;
+}
+
+.main__about--items {
+  list-style-type: none;
+  padding-top: 1rem;
+}
+
+.main__about--items-heading {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.main__about--item {
+  padding-left: 4rem;
+}
+
+.main__portfolio {
+  padding: 3rem 10% 2rem 10%;
+  background-color: rgb(54, 54, 54);
+  color: white;
+}
+
+.main__portfolio--items {
+  display: flex;
+  flex-wrap: wrap;  
+}
+
+.main__portfolio--item {
+  flex: 0 1 calc(100% / 3 - 4%);
+  border: solid rgb(104, 104, 104) 1px;
+  border-radius: 2%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  color: black;
+  transition: all 0.2s;
+}
+
+.main__portfolio--item:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.text--link {
+  text-shadow: 1px 1px 1px rgba(59, 59, 59, 0.6);
+}
+
+.portfolio--item--image--holder {
+  background-color: black;
+  width: 100%;
+  position: relative;
+  overflow: hidden;  
+}
+
+.portfolio--item--image--holder::after {  
+  content: "";
+  display: block;
+  padding-top: 68.89%;   /* images 1260x868px => 868/1260=0.688889   */
+} 
+
+.portfolio--item--image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  /* border-bottom: solid rgb(105, 105, 105) 2px; */
+}
+
+.portfolio--item--header {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+.portfolio--item--text {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 0rem 1rem 1rem 1rem;
+  background-color: white;  
+}
+
+.portfolio--item--tech {
+   background-color: rgb(104, 104, 104);
+   color: white;
+   font-size: 0.9rem;
+   text-align: center;
+   padding: 7px;
+/*    border-bottom: solid rgb(105, 105, 105) 2px; */
+}
+
+.main__contact {
+  padding: 3rem 10% 2rem 10%;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  background-image: url("../img/sit3-neg-bar-2.jpg");
+  background-size: cover;
+  padding-bottom: 10%;
+   border-top: 1px solid rgb(126, 126, 126);
+  border-bottom: 1px solid rgb(126, 126, 126);
+  
+}
+
+.footer {
+  background-color: rgba(25,25,25, 0.8);
+  border-top: 1px solid rgb(126, 126, 126);
+  color: rgb(233, 233, 233);   
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;   
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem; 
+}
+
+@media (max-width: 850px) {  
+  .main__portfolio--item {
+    flex: 0 1 calc(100% / 2 - 4%);
+  }
+
+  .navbar__item:last-of-type {
+    margin: 0 0rem;      
+  }
+}
+
+@media (max-width: 490px) {
+  .navbar__items {
+    display: none;
+  }
+
+  .collapsible-menu {
+    display: block;
+  }
+
+  .home__name {
+    font-size: 3rem;
+    top: 20%;
+    left: 8%;
+  }
+
+  .home__quote {
+    font-size: 1.25rem;
+    top: 50%;
+    left: 8%;
+  }
+
+	.main {
+		font-size: 1rem;
+  	line-height: 1.2;
+	}
+		
+	.main__about,
+	.main__portfolio, 
+	.main__contact {
+		padding: 2rem 5% 1rem 5%;
+	}	
+
+  .main__contact {
+		padding-bottom: 20%;
+	}
+
+	.main--headings {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+	
+  .main__portfolio--items {
+    flex-direction: column;
+  }
+
+  .main__portfolio--item {
+    flex: 0 1 50%;
+    margin-bottom: 10%;
+  }
+}
+  /*
+  Assignment: https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-personal-portfolio-webpage/
+  */
