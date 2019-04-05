@@ -80,11 +80,12 @@ input#m-menu {
   display: none;
 }
 
-/* NOT USED:
 input:checked ~ label {
-  background-image: url(close.png);
+  background-image: url("../img/close4+.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 25px;
 }
-*/
 
 input:checked ~ .m-menu__content {
   max-height: 100%;
@@ -279,8 +280,24 @@ input:checked ~ .m-menu__content {
   text-align: center;
   font-size: 0.9rem;
   line-height: 1.2;
-  padding: 0rem 1rem 1rem 1rem;
+  padding: 0 1rem 0.5rem 1rem;
   background-color: white;  
+}
+
+.portfolio--item--link {
+  flex-grow: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  background-color: rgb(255, 255, 255); 
+  border-top: 1px solid  rgba(80, 80, 165, 0.3); 
+}
+
+.project--link {
+  color: rgb(80, 80, 165);
+  text-shadow: 1px 1px 1px rgba(59, 59, 59, 0.6);
+  font-size: 0.8rem;
 }
 
 .portfolio--item--tech {
@@ -327,7 +344,7 @@ input:checked ~ .m-menu__content {
   }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 510px) {
   .navbar__items {
     display: none;
   }
@@ -377,6 +394,3 @@ input:checked ~ .m-menu__content {
     margin-bottom: 10%;
   }
 }
-  /*
-  Assignment: https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-personal-portfolio-webpage/
-  */
